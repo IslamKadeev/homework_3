@@ -12,21 +12,24 @@ class SuperHero(Weapons):
         self.finder.get_antagonist(place)
 
     def attack(self):
-        self.fire_a_gun()
+        pass
 
     def ultimate(self):
         pass
 
 
-class ChakNorris(SuperHero, Weapons):
+class ChakNorris(SuperHero):
     def __init__(self):
         super(ChakNorris, self).__init__('Chak Norris', False)
 
+    def attack(self):
+        return Weapons.fire_a_gun()
 
-class Superman(SuperHero, Weapons):
+
+class Superman(SuperHero):
 
     def __init__(self):
         super(Superman, self).__init__('Clark Kent', True)
 
-    def attack(self):
-        return Weapons.kick()
+    def ultimate(self):
+        return Weapons.incinerate_with_lasers()
