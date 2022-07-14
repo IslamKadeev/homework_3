@@ -1,8 +1,7 @@
 from antagonistfinder import AntagonistFinder
 from weapons import Weapons
 
-class SuperHero(Weapons):
-
+class SuperHero:
     def __init__(self, name, can_use_ultimate_attack=True):
         self.name = name
         self.can_use_ultimate_attack = can_use_ultimate_attack
@@ -27,7 +26,6 @@ class ChakNorris(SuperHero):
 
 
 class Superman(SuperHero):
-
     def __init__(self):
         super(Superman, self).__init__('Clark Kent', True)
 
